@@ -1,0 +1,74 @@
+@media only screen and (min-width: 1024px) {
+  body {
+    max-width: 2048px;
+    min-width: 1024px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li a {
+    display: grid;
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns, first is twice as wide */
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+  .card:first-of-type {
+    grid-column: 1 / 2; /* Span only the first column */
+    margin-bottom: 0;
+  }
+
+  .card:last-of-type {
+    grid-column: 2 / 3; /* Span only the second column */
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 1023px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    display: block; /* Change display to block to stack elements */
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
+  .text {
+    font-size: 23px;
+  }
+
+  main .card {
+    margin-top: 15px;
+    margin-bottom: 1rem !important; /* Add spacing between stacked cards */
+  }
+
+  main hr {
+    width: 100%;
+  }
+}

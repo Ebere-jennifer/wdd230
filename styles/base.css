@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 0.5rem;
+  font-family: "Roboto Slab", serif;
+  font-size: larger;
+  font-weight: 600;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4b40c2;
+  color: white;
+}
+
+header img {
+  border-radius: 3px;
+  margin-right: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  font-size: 35px;
+}
+
+nav {
+  background-color: #342d96;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav ul li {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  width: 100%;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.active {
+  background-color: #5d33ac;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.active:hover {
+  background-color: #305676;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  /* gap: 1rem; */
+  /* padding: 1rem; */
+  grid-template-columns: 1fr; /* Default for small screens */
+}
+
+h1 {
+  text-align: left;
+  font-size: 2rem;
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+main hr {
+  grid-column: 1 / -1;
+  margin: 0;
+  border: none;
+  height: 1px;
+  background-color: #434243;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  min-width: 300px;
+}
+
+.card h2 {
+  margin: 0;
+  background-color: #4b40c2;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px 4px 0 0; /* Border radius only on the top */
+  width: 100%; /* Span the entire width */
+}
+
+.card p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem; /* Add padding at the top of the list */
+}
+
+.card li {
+  margin: 0.5rem 0; /* Add margin to each list item for spacing */
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer {
+  background-color: #4b40c2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+#lastModified {
+  color: #fbff00;
+  font-size: 17px;
+}
