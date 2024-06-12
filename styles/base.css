@@ -102,7 +102,7 @@ main hr {
   justify-content: space-between;
   margin: 0;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 11px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   min-width: 300px;
