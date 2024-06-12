@@ -78,8 +78,6 @@ main {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  /* gap: 1rem; */
-  /* padding: 1rem; */
   grid-template-columns: 1fr; /* Default for small screens */
 }
 
@@ -104,7 +102,7 @@ main hr {
   justify-content: space-between;
   margin: 0;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   min-width: 300px;
