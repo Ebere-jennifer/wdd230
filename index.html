@@ -19,10 +19,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom-normalize.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <header>
@@ -32,9 +33,11 @@
         width="140"
         height="150">
       <span class="text">Jennifer C. Ebere</span>
+      <div id="mode">🕶️</div>
     </header>
     <nav>
-      <ul>
+      <button id="menu" aria-label="Toggle navigation menu"></button>
+      <ul class="navigation">
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Chamber</a></li>
         <li><a href="week01/chamber-site-plan.html" target="_blank">Site Plan</a></li>
@@ -49,10 +52,10 @@
         <ul>
           <li>Week 01: <a href="week01/holygrail.html" target="_blank">Layout</a> | <a href="week01/media-query.html" target="_blank">Media Query</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyWjoE" target="_blank">JS Pen</a></li>
           <li>Week 02: <a href="week02/design.html" target="_blank">Design Principles</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyaZLM" target="_blank">JS Pen</a> | <a href="week02/bom.html" target="_blank">JS - Fav BOM Chapter</a></li>
-          <li>Week 03: <a href="#"></a></li>
-          <li>Week 04: <a href="#"></a></li>
-          <li>Week 05: <a href="#"></a></li>
-          <li>Week 06: <a href="#"></a></li>
+          <li>Week 03: <a href="#">Learning Activities</a></li>
+          <li>Week 04: <a href="#">Learning Activities</a></li>
+          <li>Week 05: <a href="#">Learning Activities</a></li>
+          <li>Week 06: <a href="#">Learning Activities</a></li>
         </ul>
       </section>
 
@@ -60,8 +63,7 @@
         <h2>Information</h2>
         <p>Lagos, Nigeria</p>
         <p>Weather: Sunny</p>
-        <p>Visit Count: 19</p>
-        <!-- Add more information placeholders when needed -->
+        <p>Visit Count: <span id="visitCount"></span></p>
       </section>
     </main>
 

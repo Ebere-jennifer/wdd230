@@ -5,6 +5,10 @@
     margin: 0 auto;
   }
 
+  #menu {
+    display: none;
+  }
+
   nav ul {
     display: flex;
     flex-direction: row;
@@ -43,6 +47,37 @@
 
 /* Media query for small screens */
 @media only screen and (max-width: 1023px) {
+  #menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: #000;
+     position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  #menu::before{
+    content: "≡";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  #menu.open::before {
+    content: "X";
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  .navigation {
+    display: none; /* Hide the navigation by default */
+  }
+
+  #menu.open + .navigation {
+    display: block; /* Show the navigation when the menu is open */
+  }
+
   nav ul {
     display: flex;
     flex-direction: column;

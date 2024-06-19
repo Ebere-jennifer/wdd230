@@ -1,0 +1,53 @@
+/* Set a consistent box-sizing */
+*,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set a consistent base font */
+body {
+  font-family: 'Roboto Slab', serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure buttons inherit font settings */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Add a consistent margin for sections */
+section {
+  margin-bottom: 1rem;
+}
+
+/* Add a consistent padding for the main content area */
+main {
+  padding: 1rem;
+}
