@@ -1,3 +1,4 @@
+/* General styles */
 body {
   margin: 0;
   padding: 0;
@@ -15,12 +16,19 @@ footer {
   font-style: normal;
 }
 
+/* Header styles */
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #4b40c2;
   color: white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin: 0 auto; /* Center the profile div */
 }
 
 header img {
@@ -29,19 +37,21 @@ header img {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-#mode {
-	position: absolute;
-	top: 3.5rem;
-	right: 0.5rem;
-	font-size: 3rem;
-	cursor: pointer;
-	font-size: 2rem;
-}
-
 .text {
   font-size: 35px;
 }
 
+/* Mode button styles */
+#mode {
+	/* position: absolute;
+	top: 3.5rem;
+	right: 0.5rem;
+	font-size: 3rem; */
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+/* Navigation styles */
 nav {
   background-color: #342d96;
   margin: 0 auto;
@@ -77,18 +87,20 @@ nav a:hover {
   color: white;
 }
 
+/* Main content styles */
 main {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr; /* Default for small screens */
+  padding: 1rem;
 }
 
 h1 {
   text-align: left;
   font-size: 2rem;
   grid-column: 1 / -1;
-  margin: 0;
+  /* margin: 0; */
 }
 
 main hr {
@@ -99,6 +111,7 @@ main hr {
   background-color: #434243;
 }
 
+/* Card styles */
 .card {
   display: grid;
   grid-template-columns: 1fr; /* Ensure the card takes full width */
@@ -151,6 +164,7 @@ ul {
   padding-left: 0;
 }
 
+/* Footer styles */
 footer {
   background-color: #4b40c2;
   color: white;
