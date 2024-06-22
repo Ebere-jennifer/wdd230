@@ -1,0 +1,124 @@
+@media only screen and (min-width: 1024px) {
+  body {
+    max-width: 2048px;
+    min-width: 1024px;
+    margin: 0 auto;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    width: auto; 
+  }
+
+  nav ul li a {
+    padding: 1rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+   /* Adjust the card layout for large screens */
+  .content-container {
+    flex-direction: column;
+  }
+
+  .hero-image,
+  .main-card {
+    width: 100%;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  /* Grid layout for cards */
+  .main-card {
+    grid-column: 1 / -1;
+  }
+
+  .newsletter-signup, .current-events, .weather-card, .company-spotlights {
+    grid-column: span 1;
+  }
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 1023px) {
+  body {
+    max-width: 1023px;
+    min-width: 768px;
+    margin: 0 auto;
+  }
+  
+  header img {
+    justify-content: left;
+
+  }
+  #menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: static;
+    cursor: pointer;
+    top: 0rem;
+    right: 1rem;
+  }
+
+  #menu::before{
+    content: "≡";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  #menu.open::before {
+    content: "X";
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  .navigation {
+    display: none; /* Hide the navigation by default */
+  }
+
+  #menu.open + .navigation {
+    display: block; /* Show the navigation when the menu is open */
+  }
+
+  .join-button  {
+    
+  position: static;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav ul li {
+    width: 100%; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto;
+  }
+}

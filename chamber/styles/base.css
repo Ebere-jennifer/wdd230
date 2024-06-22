@@ -1,0 +1,371 @@
+/* * General styles */ 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 0.5rem;
+  font-family: "Bellota";
+  font-size: larger;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Crimson Text, serif";
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0496ff;
+  color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header img {
+  border-radius: 3px;
+  margin-right: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/*Join button styles */
+.join {
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.join-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #3f37c9;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background-color: #0077b6;
+  color: #FAC6F6;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #0077b6;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  width: 100%; 
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+nav a:hover {
+  background-color: #0496ff;
+  color: #FAC6F6;
+}
+
+/* Main content styles */
+main {
+  max-width: 1700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns by default */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Container for hero image and main card */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 0 1rem; /* Add padding to create space on the sides */
+}
+
+.hero-image {
+  width: 100%;
+  gap: 2rem;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 11px;
+  transition: transform .5s;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero-image:hover {
+  opacity: .6;
+  transform: scale(1.1);
+}
+
+.main-card {
+  flex: 1;
+  background-color: #f4f4f4;
+  border-radius: 11px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  max-width: 900px; /* Set a max-width to prevent stretching to the end */
+  margin: 0 auto; /* Center the card within the container */
+}
+
+.main-card h2,
+h3 {
+  color: #0077b6;
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
+.main-card p {
+  color: #0466c8;
+  font-weight: normal;
+}
+
+/* Flex container for pairs of cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch; /* Ensure equal height */
+}
+
+.card-container > section {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-container > section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0077b6;
+  text-align: center;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+  background-color: #f4f4f4;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.newsletter-signup h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #0077b6;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-form label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #0466c8;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0466c8;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #0496ff;
+  color: #FAC6F6;
+}
+
+/* Current Events, Weather, and Company Spotlights Card Styles */
+.current-events,
+.weather-card,
+.company-spotlights {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 1.5rem 0;
+}
+
+.current-events h2,
+.weather-card h2,
+.company-spotlights h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0077b6;
+  text-align: center;
+}
+
+.current-events .event,
+.weather-card .weather-info,
+.company-spotlights .spotlight {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.current-events .event:hover,
+.weather-card .weather-info:hover,
+.company-spotlights .spotlight:hover {
+  transform: translateY(-5px);
+}
+
+.current-events .event h3,
+.company-spotlights .spotlight h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+
+.current-events .event p,
+.weather-card .weather-info p,
+.company-spotlights .spotlight p {
+  font-size: 1rem;
+  color: #0466c8;
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.company-spotlights .spotlight .spotlight-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0496ff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.company-spotlights .spotlight .spotlight-link:hover {
+  background-color: #0077b6;
+  color: #FAC6F6;
+}
+
+/* Footer styles */
+footer {
+  background-color: #0496ff;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.footer-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  gap: 0.5rem;               
+}
+
+.footer-align p {
+  margin: 0;              
+}
+
+.footer-align .text-align {
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start; 
+}
+
+.footer-align img {
+  height: auto;
+  max-height: 80px;       
+}
+
+.footer-align img[alt="logo image"] {
+  margin-right: 1rem;     
+}
+
+footer p {
+  color: white;
+  margin: 0.5rem 0;
+  font-family: "Bellota";
+}
+
+footer img {
+  vertical-align: middle; 
+  margin-left: 5px; 
+  display: inline-block; 
+}
+
+hr {
+  border: none;
+  border-top: 0.5px solid #ffffff5f;
+  margin: 1rem 0;
+}
+
+.social-handle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.social-handle a {
+  margin: 0 0.5rem;
+}
+
+#lastModified {
+  color: black;
+  font-size: 17px;
+}
