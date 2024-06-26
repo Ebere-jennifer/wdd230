@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer C. Ebere- WDD 230 - Web Frontend Development - Responsive Images - srcset</title>
+    <meta name="description" content="This is Jennifer Ebere's responsive images page.">
+    <meta name="author" content="Ebere Jennifer Chikaodi">
+
+    <!-- Meta Open Graph -->
+    <meta property="og:title" content="WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This is Jennifer Ebere's course assignment portal for WDD 230 - Web Frontend Development.">
+    <meta property="og:image" content="https://www.worldatlas.com/r/w1200-q80/upload/d2/c1/3c/shutterstock-620898968.jpg">
+    <meta property="og:url" content="https://ebere-jennifer.github.io/wdd230/">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet">
+
+      <!-- CSS File -->
+    <link rel="stylesheet" href="styles/responsive-images.css">
+
+    <!-- JavaScript File -->
+    <script src="scripts/lazyload.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+
+  </head>
+
+  <body>
+
+    <main>
+      <div class="hero">
+        <picture>
+          <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+          <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+          <img src="images/hero-large.webp" alt="Aba Nigeria Temple" width="1500" height="750">
+        </picture>
+
+      </div>
+    </main>
+  </body>
+</html>  
