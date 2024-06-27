@@ -26,7 +26,6 @@
   main {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Two columns, first is twice as wide */
-    grid-template-rows: auto auto;
     gap: 1rem;
   }
 
@@ -41,7 +40,6 @@
 
   .card {
     display: grid;
-    justify-content: start;
   }
 }
 
@@ -51,10 +49,10 @@
     font-size: 2rem;
     border: 0;
     background: none;
-    color: #000;
-     position: absolute;
+    color: white;
+    position: static;
     cursor: pointer;
-    top: 1rem;
+    top: 0rem;
     right: 1rem;
   }
 

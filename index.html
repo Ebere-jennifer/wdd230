@@ -29,10 +29,11 @@
     <header>
       <div class="profile">
         <img
-          src="images/Jennifer-ebere.jpg"
+          src="images/Jennifer-ebere.webp"
           alt="Jennifer Ebere Profile"
           width="140"
-          height="150">
+          height="150"
+          loading="lazy">
         <span class="text">Jennifer C. Ebere</span>
       </div>
       <div id="mode">🕶️</div>
@@ -47,26 +48,43 @@
       </ul>
     </nav>
     <main>
+      <div class="hero">
+        <picture>
+          <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+          <img src="images/hero-large.webp" alt="Aba Nigeria Temple" width="960" height="480" loading="lazy" >
+        </picture>
+        <div class="temple-name">
+          <p>Aba Nigeria Temple</p>
+        </div>
+      </div>
       <h1>WDD 230: Web Frontend Development</h1>
       <hr>
-      <section class="card">
-        <h2>Learning Activities</h2>
-        <ul>
-          <li>Week 01: <a href="week01/holygrail.html" target="_blank">Layout</a> | <a href="week01/media-query.html" target="_blank">Media Query</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyWjoE" target="_blank">JS Pen</a></li>
-          <li>Week 02: <a href="week02/design.html" target="_blank">Design Principles</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyaZLM" target="_blank">JS Pen</a> | <a href="week02/bom.html" target="_blank">JS - Fav BOM Chapter</a></li>
-          <li>Week 03: <a href="week03/images/landscape.webp">WebP</a> | <a href="week03/lazyload.html" target="_blank">Lazy Loading</a> | <a href="week03/responsive-images.html" target="_blank">Responsive Images: srcset</a> | <a href="week03/bom.html" target="_blank">BOM App: Local Storage - Fav List </a></li>
-          <li>Week 04: <a href="#">Learning Activities</a></li>
-          <li>Week 05: <a href="#">Learning Activities</a></li>
-          <li>Week 06: <a href="#">Learning Activities</a></li>
-        </ul>
-      </section>
+      <div class="card">
+        <section class="card-body">
+          <h2>Learning Activities</h2>
+          <ul>
+            <li>Week 01: <a href="week01/holygrail.html" target="_blank">Layout</a> | <a href="week01/media-query.html" target="_blank">Media Query</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyWjoE" target="_blank">JS Pen</a></li>
+            <li>Week 02: <a href="week02/design.html" target="_blank">Design Principles</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyaZLM" target="_blank">JS Pen</a> | <a href="week02/bom.html" target="_blank">JS - Fav BOM Chapter</a></li>
+            <li>Week 03: <a href="week03/images/landscape.webp">WebP</a> | <a href="week03/lazyload.html" target="_blank">Lazy Loading</a> | <a href="week03/responsive-images.html" target="_blank">Responsive Images: srcset</a> | <a href="week03/bom.html" target="_blank">BOM App: Local Storage - Fav List </a></li>
+            <li>Week 04: <a href="#">Learning Activities</a></li>
+            <li>Week 05: <a href="#">Learning Activities</a></li>
+            <li>Week 06: <a href="#">Learning Activities</a></li>
+          </ul>
+        </section>
+      </div>  
 
-      <section class="card">
-        <h2>Information</h2>
-        <p>Lagos, Nigeria</p>
-        <p>Weather: Sunny</p>
-        <p>Visit Count: <span id="visitCount"></span></p>
-      </section>
+      <div class="card">
+        <section class="card-body" id="weatherCard">
+          <h2>Information</h2>
+          <p>Visit Count: <span id="visitCount"></span></p>
+          <div id="weatherInfo">
+            <!-- Weather information will be dynamically added here -->
+          </div>
+        </section>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15852.767812505968!2d3.3342050347859886!3d6.6230624439373225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1719446365929!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </main>
 
     <footer>
@@ -74,7 +92,7 @@
         &copy;<span id="currentYear"></span>&#127802; Jennifer C. Ebere
         &#127802; Lagos, Nigeria
         <img
-          src="images/Nigerian-flag.jpg"
+          src="images/Nigerian-flag.webp"
           alt="Nigerian Flag"
           width="20"
           height="13">
