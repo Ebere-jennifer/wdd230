@@ -52,6 +52,19 @@
   .newsletter-signup, .current-events, .weather-card, .company-spotlights {
     grid-column: span 1;
   }
+
+  .discovery-main {
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+  }
+
+  .d-gallery img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .d-gallery img:hover {
+    transform: scale(1.05);
+  }
 }
 
 /* Media query for small screens */
@@ -60,6 +73,14 @@
     max-width: 1023px;
     min-width: 768px;
     margin: 0 auto;
+  }
+
+  .discover-main {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar, .mainarea {
+    grid-column: 1 / -1;
   }
   
   header img {
@@ -119,5 +140,9 @@
     display: grid;
     grid-template-columns: 1fr; 
     grid-template-rows: auto auto;
+  }
+
+  .discovery-main {
+    grid-template-columns: 1fr 3fr;
   }
 }

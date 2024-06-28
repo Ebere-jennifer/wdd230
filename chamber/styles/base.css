@@ -302,6 +302,130 @@ h3 {
   color: #FAC6F6;
 }
 
+/*Purpose */
+.message {
+  color: #0077b6;
+}
+
+.purpose h1 {
+  color: #0077b6;
+}
+
+.purpose p {
+  color: #0466c8;
+  font-weight: normal;
+}
+
+/* Grid layout for the main content */
+.discovery-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+/* Main area styles */
+.mainarea {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.mainarea picture {
+  margin: 0;
+  padding: 0;
+}
+
+.mainarea img {
+  width: 100%;
+  height: auto;
+}
+
+.map,
+.calendar {
+  margin-bottom: 40px; 
+}
+
+.calendar-iframe {
+  border: none;
+  overflow: hidden; /* To replace the scrolling attribute */
+  width: 400px;
+  height: 500px;
+}
+
+
+/* Lazy loading image styles */
+img[loading="lazy"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background-color: black;
+  animation: fade 20s;
+}
+
+@keyframes fade {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+/* FAQ Section Styles */
+.faq {
+  margin-top: 40px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: #0077b6;
+}
+
+.faq-item h3 {
+  font-size: 1.2em;
+  /* font-weight: bold; */
+  margin-bottom: 5px;
+}
+
+.faq-item p {
+  color: #0466c8; 
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+  margin-top: 40px;
+}
+
+.testimonials blockquote {
+  border-left: 3px solid #0077b6;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.testimonials blockquote p {
+  font-style: italic;
+  color: #0466c8;
+  font-weight: normal;
+}
+
+.testimonials blockquote footer {
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+
 /* Footer styles */
 footer {
   background-color: #0496ff;
