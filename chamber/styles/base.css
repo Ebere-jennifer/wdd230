@@ -351,6 +351,13 @@ h3 {
   margin-bottom: 40px; 
 }
 
+/* General styles for iframes */
+.map-iframe, .calendar-iframe {
+  border: none;
+  width: 400px;
+  height: 500px;
+}
+
 .calendar-iframe {
   border: none;
   overflow: hidden; /* To replace the scrolling attribute */
