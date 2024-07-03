@@ -41,6 +41,10 @@
   .card {
     display: grid;
   }
+
+  #form {
+    width: 100%;
+  }
 }
 
 /* Media query for small screens */
@@ -110,5 +114,27 @@
 
   main hr {
     width: 100%;
+  }
+
+  #form {
+    width: 70%;
+  }
+
+  #form label span {
+    font-size: 1.2rem;
+  }
+
+  #form input[type="text"],
+  #form input[type="password"],
+  #form input[type="email"],
+  #form input[type="range"] {
+    padding: 8px;
+    font-size: 1rem;
+  }
+
+  .submitBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.3rem;
   }
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer C. Ebere - Form Page</title>
+    <meta
+      name="description"
+      content="This is Jennifer Ebere's form page for WDD 230 - Web Frontend Development.">
+    <meta name="author" content="Ebere Jennifer Chikaodi">
+    <meta property="og:title" content="WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This is Jennifer Ebere's form page for WDD 230 - Web Frontend Development.">
+    <meta property="og:image" content="https://www.worldatlas.com/r/w1200-q80/upload/d2/c1/3c/shutterstock-620898968.jpg">
+    <meta property="og:url" content="https://ebere-jennifer.github.io/wdd230/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom-normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <div class="profile">
+        <img
+          src="images/jennifer-ebere-image.webp"
+          alt="Jennifer Ebere Profile"
+          width="140"
+          height="150"
+          loading="lazy">
+        <span class="text">Jennifer C. Ebere</span>
+      </div>
+      <div id="mode">🕶️</div>
+    </header>
+    <nav>
+      <button id="menu" aria-label="Toggle navigation menu"></button>
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/index.html" target="_blank">Chamber</a></li>
+        <li><a href="week01/chamber-site-plan.html" target="_blank">Site Plan</a></li>
+        <li><a href="form.html" target="_blank">Form</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <form method="get" action="record.html" id="form" target="_blank"> 
+        <fieldset>
+          <legend>Your Information</legend>
+          <div id="message"></div>
+          
+          <label for="username">
+            <span>Username</span> 
+            <input type="text" id="username" name="username" required>
+          </label>
+
+          <label for="password">
+            <span>Password</span> 
+            <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters long and only alphanumeric" required >
+          </label>
+
+          <label for="confirmPassword">
+            <span>Confirm Password</span> 
+            <input type="password" id="confirmPassword" name="confirmPassword" pattern="[A-Za-z0-9]{8,}" title="Must match first password" required>
+          </label>
+          
+          <label for="email">
+            <span>Email</span> 
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" title="Please enter a valid email address" placeholder="someone@byui.edu" required>
+          </label>
+
+          <label for="rating">
+            <span>Page Rating</span>  
+            <span id="rangevalue">0</span>
+            <input type="range" id="rating" name="rating" min="0" max="10" value="0" step="1"  list="rangevalues">
+          </label>  
+          
+          <datalist id="rangevalues">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </datalist>
+        </fieldset>
+        
+        <input type="submit" value="Complete Rating" class="submitBtn">
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        &copy;<span id="currentYear"></span>&#127802; Jennifer C. Ebere
+        &#127802; Lagos, Nigeria
+        <img
+          src="images/nigerian-flag-image.webp"
+          alt="Nigerian Flag"
+          width="20"
+          height="13">
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/form.js"></script>
+  </body>
+</html>
