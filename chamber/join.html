@@ -25,7 +25,7 @@
   <body>
     <header>
       <div class="hero">
-        <img src="images/chamber-of-commerce.webp" alt="logo image">
+        <img src="images/chamber-of-commerce.webp" alt="logo image" width="371" height="155">
         <h1>LAGOS CHAMBER OF COMMERCE</h1>
       </div>
       <div class="join">
@@ -43,12 +43,13 @@
         </ul>
     </nav>
 
-    <main>
-      <form method="get" action="thankyou.html" target="_blank"> 
+    <main class="join-main">
+      <span class="message"></span>
+      <h2>Join Membership Application Form</h2>
+      <form method="get" action="thankyou.html" id="form" target="_blank"> 
         <fieldset>
-          <legend>Join Chamber of Commerce</legend>
-          <span class="message"></span>
-
+          <legend>Personal Information</legend>
+          
           <label>
             <span>First Name</span>
             <input type="text" name="fname" title="First Name" id="fname" required>
@@ -69,22 +70,26 @@
             <span>Phone Number</span>
             <input type="tel" name="phone" id="phone" required>
           </label>
+        </fieldset>  
+
+        <fieldset>
+          <legend>Business Information</legend>
           <label>
-            <span>Business or Organization's Name</span>
+            <span id="businessNameLabel">Business or Organization's Name</span>
             <input type="text" name="businessName" id="businessName" required>
           </label>
           <label>
-            <span>Membership Level</span>
+            <span id="membershipLevelLabel">Membership Level</span>
             <select id="membershipLevel" name="membershipLevel">
-              <option value="membership">Please Select an Option</option>
+              <option value="membership">Please Select a Membership Option </option>
               <option value="np">NP Membership</option>
               <option value="bronze">Bronze Membership</option>
               <option value="silver">Silver Membership</option>
               <option value="gold">Gold Membership</option>
             </select>
           </label>
-          <label for="description">
-            <span>Business or Organization's Description</span>
+          <label>
+            <span id="descriptionLabel">Business or Organization's Description</span>
             <textarea id="description" name="description"></textarea>
           </label>
           <input type="hidden" id="timestamp" name="timestamp">
@@ -92,55 +97,156 @@
 
         <input type="submit" value="Click to Join COC" class="submitButton">
       </form>
+
       <div class="membership-benefits">
-        <h2>Membership Level Benefits</h2>
-
-        <div>
-          <h3>NP Membership (free)</h3>
-          <p>The NP Membership is designed for non-profit organizations to help them grow and connect within the community without any fees.</p>
-          <p>Benefits for NP Membership</p>
-          <ul>
-            <li>No fee for non-profit organizations</li>
-            <li>Access to special events, basic training, general support.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Bronze Membership ($15)</h3>
-          <p>The Bronze Membership offers greater visibility and networking opportunities to help small businesses increase their reach and connections.</p>
-          <p>Benefits for Bronze Membership</p>
-          <ul>
-            <li>Increased visibility on the chamber's website</li>
-            <li>Access to networking events</li>
-            <li>Discounted rates for chamber-sponsored workshops</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Silver Membership ($25)</h3>
-          <p>The Silver Membership enjoy enhanced benefits, including priority event access and exclusive advertising opportunities, aimed at medium-sized businesses.</p>
-          <p>Benefits for Silver Membership</p>
-          <ul>
-            <li>All benefits of Bronze Membership</li>
-            <li>Priority access to chamber-sponsored events</li>
-            <li>Exclusive advertising opportunities</li>
-            <li>Access to specialized training programs</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Gold Membership ($50)</h3>
-          <p>The Gold Membership receive premium benefits with maximum exposure and leadership opportunities within the chamber community.</p>
-          <p>Benefits for Gold Membership</p>
-          <ul>
-            <li>All benefits of Silver Membership</li>
-            <li>Featured placement on the chamber's website</li>
-            <li>Recognition at chamber events</li>
-            <li>Opportunity to lead chamber committees</li>
-            <li>Access to personal business consultations</li>
-          </ul>
-        </div>
-    </div>
+        <table>
+          <caption>Membership Levels</caption>
+          <thead>
+            <tr>
+              <th scope="col" id="notdisplay"></th>
+              <th scope="col" id="hfirst" >Non <br>Profit</th>
+              <th scope="col" id = "hsecond">Bronze</th>
+              <th scope="col">Silver</th>
+              <th scope="col">Gold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Courses, Trainings</td>
+              <td>&#10003;</td>
+              <td>&#x2713;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Business referrals</td>
+              <td>&#10003;</td>
+              <td>&#x2713;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>              
+            <tr>
+              <td>Member-to-member discounts</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Young Professionals Group</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Mentors on the Move</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Electronic Newsletter</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Monthly Magazine</td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Website Banner Ad</td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Informational Webinars</td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Online Directory Ad</td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Serve on our Business Committees</td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Targeted Matchmaking</td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Eligible to lead a Business Council</td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Invitations to exclusive legislative events</td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>One-on-One meeting with Chamber CEO</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Invitations to Chairman's Lucheon</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Eligible for Nominations to Board of Directors</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Complimentary Advocacy consultation</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td>Price per year</td>
+              <td>free</td>
+              <td>$200</td>
+              <td>$400</td>
+              <td>$600</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
 
     <footer>
@@ -148,7 +254,7 @@
         <img src="images/chamber-of-commerce.webp" alt="logo image">
         <div class="text-align">
           <p>Lagos Chamber of Commerce</p>
-          <p>Lagos, Nigeria <img src="images/nigerian-flag-image.webp" alt="Nigerian Flag" width="20" height="13"></p>
+          <p>Lagos, Nigeria </p>
         </div>
       </div>
     

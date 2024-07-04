@@ -1,4 +1,4 @@
-/* * General styles */ 
+/* ----- General styles ------ */ 
 body {
   margin: 0;
   padding: 0;
@@ -16,10 +16,10 @@ footer {
 }
 
 p {
-  font-family: "Crimson Text, serif";
+  font-family: "Crimson Text", serif;
 }
 
-/* Header styles */
+/* ------ Header styles ------- */
 header {
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@ header img {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-/*Join button styles */
+/* ------ Join button in the header styles ----- */
 .join {
 	cursor: pointer;
 	font-size: 20px;
@@ -63,7 +63,7 @@ header img {
   color: #FAC6F6;
 }
 
-/* Navigation styles */
+/* ----- Navigation styles ------ */
 nav {
   background-color: #0077b6;
   margin: 0 auto;
@@ -94,28 +94,29 @@ nav a:hover {
   color: #FAC6F6;
 }
 
-/* Main content styles */
+/* ----- Main content styles ----- */
 main {
   max-width: 1700px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns by default */
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: auto; */
+  gap: 20px;
   padding: 1rem;
 }
 
-/* Container for hero image and main card */
+/* ----- Container for hero image and main card ------ */
 .content-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: flex-start;
   padding: 0 1rem; /* Add padding to create space on the sides */
 }
 
 .hero-image {
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
   height: 100%;
   display: block;
   margin: 0 auto;
@@ -152,43 +153,106 @@ h3 {
   font-weight: normal;
 }
 
-/* Flex container for pairs of cards */
-.card-container {
-  display: flex;
-  gap: 1rem;
-  align-items: stretch; /* Ensure equal height */
+/* ------ Event, weather and company spotlight styles ------- */
+#event{
+  grid-area: 2/2;
+  font-size: 1rem;
 }
 
-.card-container > section {
-  flex: 1;
-  background-color: #f4f4f4;
-  padding: 1.5rem;
+#eventInfo{
+  background-color: rgb(238, 238, 238, 0.7); 
+  padding: 3em;
+  color:#0466c8;
+  font-weight: 500;
+  text-align: left;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  padding: 0.1em 1em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.card-container > section h2 {
+#weather{
+  text-align: center;
+  background-color: rgb(238, 238, 238, 0.7);;
+  color: #0466c8;
+  padding: 1em;
+  padding-top:0.4em;
+  margin-top: 0px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.company-spotlights{
+  display: grid;
+  background-color: rgb(238, 238, 238, 0.7);
+  grid-area: 1/4/4/5;
+  margin-left: 0px;
+  padding-bottom: 0px;
+  height: 80%;
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+#weather h2,
+#eventInfo h2,
+.company-spotlights h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #0077b6;
   text-align: center;
 }
 
-/* Newsletter Signup */
-.newsletter-signup {
+.company-spotlights .spotlight .spotlight-link {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0496ff;
+  color: black;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.company-spotlights .spotlight .spotlight-link:hover {
+  background-color: #0077b6;
+  color: #FAC6F6;
+}
+
+.current-events .event p,
+.company-spotlights .spotlight p {
+  font-size: 1.1rem;
+  color: #0466c8;
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.current-events .event h3,
+.company-spotlights .spotlight h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #0077b6;
+}
+
+/* ------ Newsletter Signup ------- */
+ .newsletter-signup {
   background-color: #f4f4f4;
   padding: 3rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  max-width: 600px;
+  max-width: 900px;
   margin: 2rem auto;
   text-align: center;
 }
 
 .newsletter-signup h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
   color: #0077b6;
+  margin-top: 0rem;
 }
 
 .newsletter-form {
@@ -221,88 +285,19 @@ h3 {
   padding: 0.9rem 2rem;
   border: none;
   border-radius: 5px;
-  background-color: #0466c8;
-  color: white;
+  background-color: #0496ff;
+  color: black;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .newsletter-form button:hover {
-  background-color: #0496ff;
+  background-color: #0466c8;
   color: #FAC6F6;
-}
+} 
 
-/* Current Events, Weather, and Company Spotlights Card Styles */
-.current-events,
-.weather-card,
-.company-spotlights {
-  background-color: #f4f4f4;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  margin: 1.5rem 0;
-}
-
-.current-events h2,
-.weather-card h2,
-.company-spotlights h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #0077b6;
-  text-align: center;
-}
-
-.current-events .event,
-.weather-card .weather-info,
-.company-spotlights .spotlight {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-  transition: transform 0.3s;
-}
-
-.current-events .event:hover,
-.weather-card .weather-info:hover,
-.company-spotlights .spotlight:hover {
-  transform: translateY(-5px);
-}
-
-.current-events .event h3,
-.company-spotlights .spotlight h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #0077b6;
-}
-
-.current-events .event p,
-.weather-card .weather-info p,
-.company-spotlights .spotlight p {
-  font-size: 1rem;
-  color: #0466c8;
-  margin: 0.5rem 0;
-  font-weight: normal;
-}
-
-.company-spotlights .spotlight .spotlight-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #0496ff;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.company-spotlights .spotlight .spotlight-link:hover {
-  background-color: #0077b6;
-  color: #FAC6F6;
-}
-
-/*Purpose */
+/* ------ Discovery Page Styles ------ */
 .message {
   color: #0077b6;
 }
@@ -316,20 +311,20 @@ h3 {
   font-weight: normal;
 }
 
-/* Grid layout for the main content */
+/* ----- Grid layout for the main content ---- */
 .discovery-main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-/* Sidebar styles */
+/* ----- Sidebar styles ------ */
 .sidebar {
   background-color: #f0f0f0;
   padding: 1rem;
 }
 
-/* Main area styles */
+/* ------ Main area styles ----- */
 .mainarea {
   display: grid;
   grid-template-columns: 1fr;
@@ -351,7 +346,7 @@ h3 {
   margin-bottom: 40px; 
 }
 
-/* General styles for iframes */
+/* ---- General styles for iframes ----- */
 .map-iframe, .calendar-iframe {
   border: none;
   width: 400px;
@@ -365,8 +360,7 @@ h3 {
   height: 500px;
 }
 
-
-/* Lazy loading image styles */
+/* ----- Lazy loading image styles ----- */
 img[loading="lazy"] {
   display: block;
   max-width: 100%;
@@ -377,14 +371,14 @@ img[loading="lazy"] {
 
 @keyframes fade {
   0%{
-      opacity: 0;
+    opacity: 0;
   }
   100%{
-      opacity: 1;
+    opacity: 1;
   }
 }
 
-/* FAQ Section Styles */
+/* ----- FAQ Section Styles ----- */
 .faq {
   margin-top: 40px;
 }
@@ -399,7 +393,6 @@ section h2 {
 
 .faq-item h3 {
   font-size: 1.2em;
-  /* font-weight: bold; */
   margin-bottom: 5px;
 }
 
@@ -409,7 +402,7 @@ section h2 {
   font-weight: normal;
 }
 
-/* Testimonials Section Styles */
+/* ---- Testimonials Section Styles ---- */
 .testimonials {
   margin-top: 40px;
 }
@@ -432,8 +425,235 @@ section h2 {
   color: white;
 }
 
+/* ----- Join Page Styles ------ */
+.join-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 3rem;
+  margin-top: 0;
+}
 
-/* Footer styles */
+.join-main h2 {
+  color: #0077b6;
+  margin: 0;
+  text-align: center;
+}
+
+#form {
+  margin-left: 20px;
+  grid-column: 1 / 2; 
+}
+
+#form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#form fieldset {
+  font-family: "Crimson Text", serif;
+  border: thin solid #666;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+#form legend {
+  padding: 0 .5rem;
+  color: #0077b6;
+  font-size: 1.5em;
+}
+
+#form label span {
+  margin-top: 0;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#form label span:not(#membershipLevelLabel):not(#businessNameLabel):not(#descriptionLabel)::after {
+  content: '*';
+  color: red;
+  margin-left: 0.25rem;
+}
+
+#form input[type="text"],
+#form input[type="email"],
+#form select,
+#form textarea,
+#form input[type="tel"] {
+  background-color: #e3eef3;
+  display: block;
+  width: 100%;
+  max-width: 27rem; 
+  padding: 10px;
+  border: 1px solid #ccc;;
+  border-radius: 5px;
+}
+
+#form input:required {
+  border-left: solid 2px red;
+}
+
+#form input:required:valid {
+  border-left: solid 2px green;
+}
+
+#form input:focus {
+  border-color: orange;
+  outline: none;
+}
+
+#form textarea:focus {
+  border-color: orange;
+  outline: none;
+}
+
+.submitButton {
+  background-color:#3f37c9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 27rem; 
+  margin: 1rem 0 2rem 2%;
+  margin-top: 0;
+  box-shadow: 1px 1px 4px #999;
+}
+
+.submitButton:hover {
+  background-color: #0496ff;
+  color: black;
+}
+ 
+/* ------ TABLE ------ */
+table {
+  width: 100%;
+  border-collapse: separate; /* Use 'separate' for border-radius to apply properly */
+  margin-bottom: 1rem;
+  background-color: rgb(231, 252, 221);
+  border-radius: 10px;
+  border: 1px solid rgb(220, 236, 212);
+  overflow: hidden; /* Ensure the border-radius is applied */
+}
+
+caption {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  caption-side: top;
+  text-align: center;
+  color: #0077b6;
+}
+
+thead,
+tbody,
+tr,
+th,
+td {
+  background-color: rgb(231, 252, 221);
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #000000; 
+  font-weight: bold;
+}
+
+td:first-child,
+th:first-child {
+  text-align: left;
+  width: 15%;
+}
+
+thead th:first-child,
+tbody td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+thead th:last-child,
+tbody td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+th, td {
+  padding: 7px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+tbody td:nth-child(1) {
+  background-color: white;
+  color: #0466c8; 
+  font-weight: bold;
+}
+
+tbody td:nth-child(2) {
+  background-color: rgba(163, 119, 119, 0.2);
+  font-weight: bold;
+}
+
+#hfirst {
+  background-color: rgba(156, 137, 137, 0.9);
+  color: black;
+  font-weight: bold;
+}
+
+tbody td:nth-child(3) {
+  background-color: rgba(82, 180, 200, 0.753);
+  font-weight: bold;
+}
+
+thead tr th:nth-child(3) {
+  background-color: rgba(66, 123, 134, 0.9);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+tbody td:nth-child(4) {
+  background-color: rgba(135, 157, 247, 0.2);
+  font-weight: bold;
+}
+
+thead tr th:nth-child(4) {
+  background-color: rgba(96, 124, 234, 0.9);
+  color: black;
+  font-weight: bold;
+}
+
+tbody td:nth-child(5) {
+  background-color: rgba(178, 231, 65, 0.2);
+  font-weight: bold;
+}
+
+thead tr th:nth-child(5) {
+  background-color: rgba(206, 235, 91, 0.9);
+  font-weight: bold;
+  color: #000000;
+}
+
+#notdisplay{
+  background-color: transparent;
+  border: none;
+}
+
+/* ----- Thank you Page ----- */
+.thankyou {
+  display: block;
+  line-height: 1.6rem;
+  width: 90%;
+  margin: 0 auto;
+  color: #0466c8;
+  font-weight: normal;
+}
+
+/* ---- Footer styles ---- */
 footer {
   background-color: #0496ff;
   text-align: center;

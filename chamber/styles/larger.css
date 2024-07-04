@@ -30,7 +30,7 @@
     gap: 1rem;
   }
 
-   /* Adjust the card layout for large screens */
+   /* ---- Adjust the card layout for large screens ----- */
   .content-container {
     flex-direction: column;
   }
@@ -40,17 +40,9 @@
     width: 100%;
   }
 
-  .card-container {
-    flex-direction: row;
-  }
-
-  /* Grid layout for cards */
+  /* ----- Grid layout for cards ----- */
   .main-card {
     grid-column: 1 / -1;
-  }
-
-  .newsletter-signup, .current-events, .weather-card, .company-spotlights {
-    grid-column: span 1;
   }
 
   .discovery-main {
@@ -67,12 +59,26 @@
   }
 }
 
-/* Media query for small screens */
+/* ----- Media query for small screens ----- */
 @media only screen and (max-width: 1023px) {
   body {
     max-width: 1023px;
     min-width: 768px;
     margin: 0 auto;
+  }
+
+  #form input[type="text"],
+  #form input[type="email"],
+  #form select,
+  #form textarea,
+  #form input[type="tel"] {
+    background-color: #e3eef3;
+    display: block;
+    width: 70%;
+    max-width: 22rem; 
+    padding: 10px;
+    border: 1px solid #ccc;;
+    border-radius: 5px;
   }
 
   .discover-main {
@@ -85,8 +91,8 @@
   
   header img {
     justify-content: left;
-
   }
+
   #menu {
     font-size: 2rem;
     border: 0;
@@ -138,7 +144,7 @@
 
   main {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto auto;
   }
 
