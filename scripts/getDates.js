@@ -75,43 +75,48 @@ if (visitCountElement) {
 }  
 
 // Weather Card
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-4.27&lon=15.28&units=imperial&appid=318b0a0b3e15694b7c687be6b0bcd797';
+// Select HTML elements in the document
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
 
-async function apiFetch(url) {
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            displayWeather(data);
-        } else {
-            throw new Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error);
+// Declare a const variable named "url" and assign it a valid URL string as given in the openweathermap api documentation.
+const apiKey = 'c004ef00086b684a3ae3cad41a54c4b2';
+const latitude = 6.63;
+const longitude = 3.34;
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=6.63&lon=3.34&units=imperial&appid=c004ef00086b684a3ae3cad41a54c4b2';
+
+// Define an asynchronous function named "apiFetch()" that uses a try block to handle errors.
+async function apiFetch() {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      displayResults(data);
+    } else {
+      throw Error(await response.text());
     }
+
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-function displayWeather(data) {
-    const temp = data.main.temp;
-    const description = data.weather[0].description;
-    const icon = data.weather[0].icon;
+function displayResults(data) {
+  currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+  const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  let desc = data.weather[0].description;
 
-    const weatherInfo = document.getElementById('weatherInfo');
-
-    const figure = document.createElement('div');
-
-    let wDescription = document.createElement('p');
-    const weatherIcon = document.createElement('img');
-    wDescription.textContent = `${temp}ºF - ${description}`;
-
-    weatherIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
-    weatherIcon.alt = "Weather Icon";
-
-    figure.appendChild(weatherIcon);
-    figure.appendChild(wDescription);
-
-    weatherInfo.appendChild(figure);
+  // Check if the icon URL is valid before setting it
+  if (data.weather[0].icon) {
+    weatherIcon.setAttribute('src', iconsrc);
+  } else {
+    weatherIcon.setAttribute('src', 'images/placeholder-weather-icon.webp'); // Use placeholder if no icon is provided
+  }
+  // weatherIcon.setAttribute('src', iconsrc);
+  weatherIcon.setAttribute('alt', desc);
+  captionDesc.textContent = `${desc}`;
 }
 
-// Fetch the weather data
-apiFetch(url);
+apiFetch();

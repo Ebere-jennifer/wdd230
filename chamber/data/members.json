@@ -1,0 +1,88 @@
+{
+  "members": [
+    {
+      "name": "Techie World",
+      "address": "123 Innovation Drive, Victoria Island, Lagos",
+      "phone": "+234 800 555 1234",
+      "website": "https://techieworld.com",
+      "image": "images/techie-world-logo.webp",
+      "membershipLevel": "Gold",
+      "additional_info": {
+        "industry": "Information Technology",
+        "ceo": "John Doe"
+      } 
+    },
+    {
+      "name": "Green Wave Corp",
+      "address": "456 Renewable Lane, Lekki, Lagos",
+      "phone": "+234 234 5215 5678",
+      "website": "https://greenwave.com",
+      "image": "images/greenwave-logo.webp",
+      "membershipLevel": "Silver",
+      "additional_info": {
+        "industry": "Renewable Energy",
+        "ceo": "Jane Smith"
+      } 
+    },
+    {
+      "name": "AquaPure Enterprises",
+      "address": "789 Waterworks Road, Ikeja, Lagos",
+      "phone": "+234 110 495 9101",
+      "website": "https://aquapure.com",
+      "image": "images/aquapure-logo.webp",
+      "membershipLevel": "Silver",
+      "additional_info": {
+        "industry": "Water Treatment",
+        "ceo": "Michael Johnson"
+      } 
+    },
+    {
+      "name": "EduTech Innovations",
+      "address": "321 Learning Street, Yaba, Lagos",
+      "phone": "+234 199 545 1122",
+      "website": "https://edutech.com",
+      "image": "images/edutech-logo.webp",
+      "membership_level": "Bronze",
+      "additional_info": {
+        "industry": "Education Technology",
+        "ceo": "Sarah Williams"
+      } 
+    },
+    {
+      "name": "FashionForward",
+      "address": "147 Trendsetter Street, Ikeja, Lagos",
+      "phone": "+234 901 255 7788",
+      "website": "https://fashionforward.com",
+      "image": "images/fashionforward-logo.webp",
+      "membership_level": "NP",
+      "additional_info": {
+        "industry": "Fashion",
+        "ceo": "Emma Davis"
+      } 
+    },
+    {
+      "name": "BuildIt Construction",
+      "address": "987 Builder's Boulevard, Apapa, Lagos",
+      "phone": "+234 480 573 5566",
+      "website": "https://buildit.com",
+      "image": "images/buildit-logo.webp",
+      "membership_level": "Gold",
+      "additional_info": {
+        "industry": "Construction",
+        "ceo": "David Beckham"
+      } 
+    },
+    {
+      "name": "MediHealth Services",
+      "address": "654 Wellness Avenue, Surulere, Lagos",
+      "phone": "+234 084 985 3144",
+      "website": "https://medihealth.com",
+      "image": "images/medihealth-logo.webp",
+      "membership_level": "Bronze",
+      "additional_info": {
+        "industry": "Healthcare",
+        "ceo": "Jayden Wilson"
+      } 
+    }
+  ]
+}

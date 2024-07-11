@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jennifer C. Ebere - WDD 230 - Web Frontend Development</title>
-    <meta
-      name="description"
-      content="This is Jennifer Ebere's course assignment portal for WDD 230 - Web Frontend Development.">
-
+    <meta name="description" content="This is Jennifer Ebere's course assignment portal for WDD 230 - Web Frontend Development.">
     <meta name="author" content="Ebere Jennifer Chikaodi">
     <meta property="og:title" content="WDD 230 - Web Frontend Development">
     <meta property="og:type" content="website">
@@ -16,9 +13,7 @@
     <meta property="og:url" content="https://ebere-jennifer.github.io/wdd230/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/custom-normalize.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -29,12 +24,7 @@
   <body>
     <header>
       <div class="profile">
-        <img
-          src="images/jennifer-ebere-image.webp"
-          alt="Jennifer Ebere Profile"
-          width="140"
-          height="150"
-          loading="lazy">
+        <img src="images/jennifer-ebere-image.webp" alt="Jennifer Ebere Profile" width="140" height="150" loading="lazy">
         <span class="text">Jennifer C. Ebere</span>
       </div>
       <div id="mode">🕶️</div>
@@ -64,13 +54,8 @@
       <div class="card">
         <section class="card-body">
           <h2>Learning Activities</h2>
-          <ul>
-            <li>Week 01: <a href="week01/holygrail.html" target="_blank">Layout</a> | <a href="week01/media-query.html" target="_blank">Media Query</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyWjoE" target="_blank">JS Pen</a></li>
-            <li>Week 02: <a href="week02/design.html" target="_blank">Design Principles</a> | <a href="https://codepen.io/jodie_jenny/pen/bGyaZLM" target="_blank">JS Pen</a> | <a href="week02/bom.html" target="_blank">JS - Fav BOM Chapter</a></li>
-            <li>Week 03: <a href="week03/images/landscape.webp">WebP</a> | <a href="week03/lazyload.html" target="_blank">Lazy Loading</a> | <a href="week03/responsive-images.html" target="_blank">Responsive Images: srcset</a> | <a href="week03/bom.html" target="_blank">BOM App: Local Storage - Fav List </a></li>
-            <li>Week 04: <a href="https://codepen.io/jodie_jenny/pen/LYoKvQw" target="_blank">CSS Pseudo-classes</a> | <a href="week04/images/css-combinators.webp" target="_blank">CSS Combinators screenshot</a> | <a href="week04/tablebuild.html" target="_blank">HTML Table Build</a> | <a href="week04/form-start/index.html" target="_blank">Form Tutorial</a></li>
-            <li>Week 05: <a href="https://codepen.io/jodie_jenny/pen/JjQjNEq" target="_blank">CSS Pseudo-elements</a> | <a href="week05/new-ward-members.json">JSON Family Record</a> | <a href="week05/prophets.html" target="_blank">The Fetch API (Prophets)</a> | <a href="week05/weather.html" target="_blank">Weather Activity</a></li>
-            <li>Week 06: <a href="#">Learning Activities</a></li>
+          <ul class="learning-activities">
+            <!-- JavaScript will populate this list -->
           </ul>
         </section>
       </div>  
@@ -79,11 +64,17 @@
         <section class="card-body" id="weatherCard">
           <h2>Information</h2>
           <p>Visit Count: <span id="visitCount"></span></p>
-          <div id="weatherInfo">
-            <!-- Weather information will be dynamically added here -->
+          <div id="weather-container">
+            <img id="weather-icon" src="images/placeholder-weather-icon.webp" alt="weather icon" width="50" height="50">
+            <span id="current-temp"></span>
+            <span>-</span>
+            <figure>
+              <figcaption></figcaption>
+            </figure>
           </div>
         </section>
       </div>
+
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15852.767812505968!2d3.3342050347859886!3d6.6230624439373225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1719446365929!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -93,14 +84,12 @@
       <p>
         &copy;<span id="currentYear"></span>&#127802; Jennifer C. Ebere
         &#127802; Lagos, Nigeria
-        <img
-          src="images/nigerian-flag-image.webp"
-          alt="Nigerian Flag"
-          width="20"
-          height="13">
+        <img src="images/nigerian-flag-image.webp" alt="Nigerian Flag" width="20" height="13">
       </p>
       <p id="lastModified"></p>
     </footer>
+
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/links.js" defer></script>
   </body>
 </html>

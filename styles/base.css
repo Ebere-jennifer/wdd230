@@ -18,11 +18,13 @@ footer {
 
 /* Header styles */
 header {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #4b40c2;
   color: white;
+  width: 100%;
 }
 
 .profile {
@@ -45,6 +47,7 @@ header img {
 #mode {
 	cursor: pointer;
 	font-size: 2rem;
+  display: inline-block;
 }
 
 /* Navigation styles */
@@ -139,7 +142,7 @@ main hr {
   background-color: #434243;
 }
 
-/* Card styles */
+/* ---- Card styles ---- */
 .card {
   display: grid;
   grid-template-columns: 1fr; 
@@ -184,16 +187,28 @@ main hr {
   text-decoration: underline; 
 }
 
-#weatherInfo  {
-  padding: 0.1rem;
-  margin-top: -5px;
+/* ------ Container to hold the weather details -----*/
+#weather-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
 }
 
-#weatherInfo img{
-  margin-bottom: -44px;
-  margin-left: 20px;
+/* Add some space between the elements */
+#current-temp {
+  margin-right: 10px;
 }
 
+figure {
+  display: flex;
+  align-items: center; 
+  margin: 0; 
+}
+
+/* Ensure figcaption doesn't break to a new line */
+figure figcaption {
+  margin-left: 10px; /* Add some space between the image and the text */
+}
 
 .map{
   width: 100%;
@@ -214,6 +229,8 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
 footer p {
