@@ -151,4 +151,19 @@
   .discovery-main {
     grid-template-columns: 1fr 3fr;
   }
+
+  /* Directory styles */
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .list-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .list-view .member-card {
+    grid-template-columns: 1fr;
+  }
 }

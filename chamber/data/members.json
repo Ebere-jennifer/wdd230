@@ -2,7 +2,7 @@
   "members": [
     {
       "name": "Techie World",
-      "address": "123 Innovation Drive, Victoria Island, Lagos",
+      "address": "123, Innovation Drive, Victoria Island, Lagos",
       "phone": "+234 800 555 1234",
       "website": "https://techieworld.com",
       "image": "images/techie-world-logo.webp",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Green Wave Corp",
-      "address": "456 Renewable Lane, Lekki, Lagos",
+      "address": "456, Renewable Lane, Lekki, Lagos",
       "phone": "+234 234 5215 5678",
       "website": "https://greenwave.com",
       "image": "images/greenwave-logo.webp",
@@ -26,7 +26,7 @@
     },
     {
       "name": "AquaPure Enterprises",
-      "address": "789 Waterworks Road, Ikeja, Lagos",
+      "address": "789, Waterworks Road, Ikeja, Lagos",
       "phone": "+234 110 495 9101",
       "website": "https://aquapure.com",
       "image": "images/aquapure-logo.webp",
@@ -38,7 +38,7 @@
     },
     {
       "name": "EduTech Innovations",
-      "address": "321 Learning Street, Yaba, Lagos",
+      "address": "321, Learning Street, Yaba, Lagos",
       "phone": "+234 199 545 1122",
       "website": "https://edutech.com",
       "image": "images/edutech-logo.webp",
@@ -50,10 +50,10 @@
     },
     {
       "name": "FashionForward",
-      "address": "147 Trendsetter Street, Ikeja, Lagos",
+      "address": "147, Trendsetter Street, Ikeja, Lagos",
       "phone": "+234 901 255 7788",
       "website": "https://fashionforward.com",
-      "image": "images/fashionforward-logo.webp",
+      "image": "images/fastforward-logo.webp",
       "membership_level": "NP",
       "additional_info": {
         "industry": "Fashion",
@@ -62,7 +62,7 @@
     },
     {
       "name": "BuildIt Construction",
-      "address": "987 Builder's Boulevard, Apapa, Lagos",
+      "address": "987, Builder's Boulevard, Apapa, Lagos",
       "phone": "+234 480 573 5566",
       "website": "https://buildit.com",
       "image": "images/buildit-logo.webp",
@@ -74,7 +74,7 @@
     },
     {
       "name": "MediHealth Services",
-      "address": "654 Wellness Avenue, Surulere, Lagos",
+      "address": "654, Wellness Avenue, Surulere, Lagos",
       "phone": "+234 084 985 3144",
       "website": "https://medihealth.com",
       "image": "images/medihealth-logo.webp",
@@ -83,6 +83,30 @@
         "industry": "Healthcare",
         "ceo": "Jayden Wilson"
       } 
+    },
+    {
+      "name": "Tech Innovation",
+      "address": "123, Silicon Avenue, Lekki, Lagos",
+      "phone": "+234 802 123 4567",
+      "website": "https://techinnovation.ng",
+      "image": "images/techinnovation-logo.webp",
+      "membershipLevel": "Gold",
+      "additional_info": {
+        "industry": "Technology",
+        "ceo": "Felicia Akorede"
+      }
+    },
+    {
+      "name": "Green Earth Solutions",
+      "address": "456, Green Street, Victoria Island, Lagos",
+      "phone": "+234 803 765 4321",
+      "website": "https://greenearthsolutions.ng",
+      "image": "images/greenearth-logo.webp",
+      "membershipLevel": "NP",
+      "additional_info": {
+        "industry": "Environmental Services",
+        "ceo": "Liya Wright"
+      }
     }
   ]
 }
