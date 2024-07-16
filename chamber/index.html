@@ -29,7 +29,7 @@
         <h1>LAGOS CHAMBER OF COMMERCE</h1>
       </div>
       <div class="join">
-        <a href="" class="join-button">Click to Join</a>
+        <a href="join.html" class="join-button">Click to Join</a>
       </div>
     </header>
 
@@ -59,32 +59,52 @@
       <section id="event">
         <div id="eventInfo">
           <h2>Current Events</h2>
-          <div class="event">
-            <h3>Annual Business Networking Gala</h3>
-            <p><strong>Date:</strong> July 10, 2024</p>
-            <p><strong>Time:</strong> 6:00 PM - 9:00 PM</p>
-            <p><strong>Description:</strong> Join us for an evening of networking with top business leaders in Lagos. This is an excellent opportunity to connect and collaborate.</p>
-          </div>
-          
-          <div class="event">
-            <h3>Export Opportunities Workshop</h3>
-            <p><strong>Date:</strong> August 15, 2024</p>
-            <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
-            <p><strong>Description:</strong> workshop aimed at educating businesses on the latest export opportunities and how to navigate the global market.</p>
-          </div>
+            <ul class="event-list">
+              <li class="event">
+                <h3>Annual Business Networking Gala</h3>
+                <ul>
+                  <li>Date: September 10, 2024</li>
+                  <li>Time: 6:00 PM - 9:00 PM</li>
+                  <li>Description: An evening of networking with top business leaders in Lagos. Connect and collaborate.</li>
+                </ul>
+              </li>
+              <li class="event">
+                <h3>Export Opportunities Workshop</h3>
+                <ul>
+                  <li>Date: December 15, 2024</li>
+                  <li>Time:10:00 AM - 4:00 PM</li>
+                  <li>Description: Educating businesses on the latest export opportunities and navigating the global market.</li>
+                </ul>
+              </li>
+            </ul>
         </div>
       </section>
 
-      <section id="weather">
-        <h2>Weather</h2>
-        <div id="weatherInfo">
-          <!-- Weather information will be dynamically added here -->
-        </div>
-    </section>
+      <div id="weather">
+        <section >
+          <h2>Today's Weather</h2>
+          <h3>Lagos, Nigeria</h3>
+          <!-- <p>The current temperature is:</p> -->
+          <div id="weather-container">
+            <img id="weather-icon" src="images/placeholder-weather-icon.webp" alt="weather icon" width="50" height="50">
+            <span id="current-temp"></span>
+            <span>-</span>
+            <figure>
+              <figcaption></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <h2>Three-Days Temperature Forecast</h2>
+          <div id="forecast-container"></div>
+        </section>
+      </div>
       
       <div>
         <section class="newsletter-signup">
           <h2>Subscribe to Our Newsletter</h2>
+          <p>🌟 Elevate Your Inbox with Exclusive Insights! <br> 📬 Be in the know and stay ahead of the curve!</p>
           <form method="get" action="newsletter-thankyou.html" class="newsletter-form" target="_blank">
             <label for="fullname">Full Name:</label>
             <input type="text" id="fullname" name="fullname" title="Full Name" placeholder="Alesia Jones" required>
@@ -97,23 +117,20 @@
         </section>  
       </div>
       
-      <div>
-        <section class="company-spotlights">
-          <h2>Company Spotlights</h2>
-          <div class="spotlight">
-            <h3>Lagos Tech Solutions</h3>
-            <p>Innovative IT services for businesses in Lagos, specializing in software development, network infrastructure, and cybersecurity.</p>
-            <a href="#" class="spotlight-link">Learn More About What We Do</a>
-          </div>
-          
-          <div class="spotlight">
-            <h3>Nigeria Export Import Bank</h3>
-            <p>Supporting Lagos businesses with financial services and export credit to enhance global competitiveness.</p>
-            <a href="#" class="spotlight-link">Learn More About What We Do</a>
-          </div>
-        </section>
-      </div>
+
+      <section class="company-spotlights">
+        <h2>Company Spotlights</h2>
+        <div id="ad-container" class="ad-container"></div>
+      </section>
     </main>
+
+    <div id="banner" class="banner">
+      <section>
+        <h2>Meet and Greet</h2>
+        <p>🎉 Join us for an exclusive Chamber of Commerce Meet & Greet! <br> Network with industry leaders and innovators every Wednesday at 7:00 p.m. <br> Don't miss out on this fantastic opportunity! 🎉</p>
+        <span id="close-banner" class="close-banner">❌</span>
+      </section>   
+    </div>
 
     <footer>
       <div class="footer-align">
