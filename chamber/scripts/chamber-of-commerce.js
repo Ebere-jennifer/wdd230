@@ -34,6 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("lastVisit", currentVisit);
   }
 
+  // Wayfinding functionality
+  const links = document.querySelectorAll(".navigation a");
+  const currentPage = window.location.pathname.split("/").pop();
+  console.log("Current Page:", currentPage); // Debugging line
+
+  links.forEach(link => {
+    console.log("Checking link:", link.getAttribute("href")); // Debugging line
+    if (link.getAttribute("href") === currentPage) {
+      console.log("Match found:", link); // Debugging line
+      link.classList.add("active");
+    }
+  });
+
   // Hamburger Toggle Menu
   const menuButton = document.getElementById('menu');
   const navigation = document.querySelector('.navigation');
@@ -79,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-    // Function to generate random number within a range
+  // Function to generate random number within a range
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -134,28 +147,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Load advertisements on page load
-  loadAdvertisements();
+  // Load advertisements on page load if ad container exists
+  if (document.getElementById("ad-container")) {
+    loadAdvertisements();
+  }
 
-
-    // Function to display the banner on specific days
+  // Function to display the banner on specific days
   function displayBanner() {
     const banner = document.getElementById("banner");
     const closeBanner = document.getElementById("close-banner");
-    const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
 
-    if (today === 1 || today === 2 || today === 3) { // Monday, Tuesday, Wednesday
-      banner.style.display = "block";
-    }
+    // Check if the banner element exists
+    if (banner && closeBanner) {
+      const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
 
-    closeBanner.addEventListener("click", () => {
-      banner.style.display = "none";
-    });
+      if (today === 1 || today === 2 || today === 3) { // Monday, Tuesday, Wednesday
+        banner.style.display = "block";
+      }
+
+      closeBanner.addEventListener("click", () => {
+        banner.style.display = "none";
+      });
+    } 
   }
 
   // Display the banner on page load
   displayBanner();
-
 
   // Weather Card
   // Select HTML elements in the document
@@ -164,84 +181,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const captionDesc = document.querySelector('figcaption');
   const forecastContainer = document.querySelector('#forecast-container');
 
-  // Declare a const variable named "url" and assign it a valid URL string as given in the openweathermap api documentation.
-  const apiKey = 'c004ef00086b684a3ae3cad41a54c4b2';
-  const latitude = 6.63;
-  const longitude = 3.34;
+  if (currentTemp || weatherIcon || captionDesc || forecastContainer) {
+    const apiKey = 'c004ef00086b684a3ae3cad41a54c4b2';
+    const latitude = 6.63;
+    const longitude = 3.34;
 
-  const currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=6.63&lon=3.34&units=imperial&appid=c004ef00086b684a3ae3cad41a54c4b2';
-  const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=6.63&lon=3.34&units=imperial&appid=c004ef00086b684a3ae3cad41a54c4b2';
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
 
-  // Define an asynchronous function named "apiFetch()" that uses a try block to handle errors.
-  // async function apiFetch() {
-  //   try {
-  //     const response = await fetch(url);
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       console.log(data);
-  //       displayResults(data);
-  //     } else {
-  //       throw Error(await response.text());
-  //     }
-
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-  async function fetchWeatherData(url) {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        return data;
-      } else {
-        throw Error(await response.text());
+    async function fetchWeatherData(url) {
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          return await response.json();
+        } else {
+          throw Error(await response.text());
+        }
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+        return null;
       }
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-      return null;
-    }
-  }
-
-  async function displayWeatherData() {
-    // Fetch current weather data
-    const currentWeatherData = await fetchWeatherData(currentWeatherUrl);
-    if (currentWeatherData) {
-      displayCurrentWeather(currentWeatherData);
     }
 
-    // Fetch forecast data
-    const forecastData = await fetchWeatherData(forecastUrl);
-    if (forecastData) {
-      displayForecast(forecastData);
-    }
-  }
+    async function displayWeatherData() {
+      const currentWeatherData = await fetchWeatherData(currentWeatherUrl);
+      if (currentWeatherData) {
+        displayCurrentWeather(currentWeatherData);
+      }
 
-  function displayCurrentWeather(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    let desc = data.weather[0].description;
-
-    // Check if the icon URL is valid before setting it
-    if (data.weather[0].icon) {
-      weatherIcon.setAttribute('src', iconsrc);
-    } else {
-      weatherIcon.setAttribute('src', 'images/placeholder-weather-icon.webp'); // Use placeholder if no icon is provided
+      const forecastData = await fetchWeatherData(forecastUrl);
+      if (forecastData) {
+        displayForecast(forecastData);
+      }
     }
-    // weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
-    captionDesc.textContent = `${desc}`;
-  }
+
+    function displayCurrentWeather(data) {
+      if (currentTemp && weatherIcon && captionDesc) {
+        currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+        const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+        let desc = data.weather[0].description;
+
+        if (data.weather[0].icon) {
+          weatherIcon.setAttribute('src', iconsrc);
+        } else {
+          weatherIcon.setAttribute('src', 'images/placeholder-weather-icon.webp');
+        }
+        weatherIcon.setAttribute('alt', desc);
+        captionDesc.textContent = `${desc}`;
+      }
+    }
 
     function displayForecast(data) {
-      // Clear previous forecast data if any
-      forecastContainer.innerHTML = '';
-
-      // Filter and display three-day forecast (first entry of each day)
-      const forecasts = data.list.filter((item, index) => index % 8 === 0); // Selecting every 8th item for each day
-
-      forecasts.slice(0, 3).forEach(forecast => {
-          const date = new Date(forecast.dt * 1000); // Convert Unix timestamp to milliseconds
+      if (forecastContainer) {
+        forecastContainer.innerHTML = '';
+        const forecasts = data.list.filter((item, index) => index % 8 === 0);
+        forecasts.slice(0, 3).forEach(forecast => {
+          const date = new Date(forecast.dt * 1000);
           const day = date.toLocaleDateString('en-US', { weekday: 'short' });
           const temp = forecast.main.temp.toFixed(0);
           const icon = forecast.weather[0].icon;
@@ -250,17 +245,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const forecastElement = document.createElement('div');
           forecastElement.classList.add('forecast-item');
           forecastElement.innerHTML = `
-              <strong>${day}</strong> : 
-              <img src="https://openweathermap.org/img/w/${icon}.png" alt="${desc}" style="vertical-align: middle;">
-              - ${temp}&deg;F - ${desc}
+            <strong>${day}</strong> : 
+            <img src="https://openweathermap.org/img/w/${icon}.png" alt="${desc}" style="vertical-align: middle;">
+            - ${temp}&deg;F - ${desc}
           `;
           forecastContainer.appendChild(forecastElement);
-      });
+        });
+      }
+    }
+
+    displayWeatherData();
   }
-
-
-
-  displayWeatherData();
-
 });
-

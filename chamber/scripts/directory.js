@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const logo = document.createElement('img');
-      const name = document.createElement('h4');
+      const name = document.createElement('h3');
       const address = document.createElement('p');
       const number = document.createElement('p');
       const links = document.createElement('a');
